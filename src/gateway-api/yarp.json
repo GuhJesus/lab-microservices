@@ -1,0 +1,25 @@
+{
+  "ReverseProxy": {
+    "Routes": {
+      "orders-route": {
+        "ClusterId": "orders-cluster",
+        "Match": {
+          "Path": "/orders/{**catch-all}"
+        },
+        "Transforms": [
+          { "PathRemovePrefix": "/orders" }
+        ]
+      }
+    },
+    "Clusters": {
+      "orders-cluster": {
+        "Destinations": {
+          "orders-api": {
+            "Address": "http://orders-api:8080/"//Container
+            //"Address": "http://localhost:5214/"//Deubg
+          }
+        }
+      }
+    }
+  }
+}

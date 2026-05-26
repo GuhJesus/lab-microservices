@@ -1,0 +1,19 @@
+{
+  "name": "lab-microservices-dev",
+  "dockerComposeFile": [
+    "../compose/docker-compose.yml",
+    "../compose/docker-compose.override.yml"
+  ],
+  "service": "orders-api",
+  "workspaceFolder": "/workspaces/lab-microservices",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csharp",
+        "ms-azuretools.vscode-docker",
+        "eamodio.gitlens"
+      ]
+    }
+  },
+  "remoteUser": "root"
+}

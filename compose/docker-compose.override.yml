@@ -1,0 +1,8 @@
+services:
+  orders-api:
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+
+  gateway-api:
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
